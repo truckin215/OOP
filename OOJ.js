@@ -82,9 +82,21 @@ class NinjaGod {
     }
 }
 
-let itachi = new NinjaGod("Itachi",'Manguko','Fire','Punch');
+// let itachi = new NinjaGod("Itachi",'Manguko','Fire','Punch');
 
-display(itachi.name())
-display(itachi.melee())
-display(itachi.sharinga())
-display(itachi.jutsu())
+// display(itachi.name())
+// display(itachi.melee())
+// display(itachi.sharinga())
+// display(itachi.jutsu())
+
+// OOP polymorphism: overide shared behaviors from parent.
+class UchiahGod extends NinjaGod {
+    constructor(name, ability, style, move){
+        super(name, ability, style, move)
+        this.village = 'Hidden Leaf';
+    }
+    combo(){
+        return "Activate: " + super.sharinga() + "combo with " + super.melee 
+    }
+}
+let itachi = new UchiahGod("Itachi",'Manguko','Fire','Punch');
